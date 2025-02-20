@@ -1,76 +1,79 @@
+
 #include <stdio.h>
 
 int main() {
-    // Definição das variáveis
-    int codigo_cidade1, codigo_cidade2;
-    float area1, populacao1, populacao_por_k2_1;
-    float area2, populacao2, populacao_por_k2_2;
+    
+    char estado[3], nome[50];
+    int codigo, populacao, pontos_turisticos;
+    float area, pib;
 
-    // Cadastro da primeira cidade
-    printf("Digite o código da primeira cidade:\n");
-    scanf("%d", &codigo_cidade1);
+    
+    printf("Digite o seu estado (ex: SP, RJ):\n");
+    scanf("%2s", estado);  // Lê até 2 caracteres (+1 para o '\0')
 
-    printf("Digite a área da primeira cidade (km²):\n");
-    scanf("%f", &area1);
+    printf("Digite o código:\n");
+    scanf("%d", &codigo);
 
-    printf("Digite a população da primeira cidade:\n");
-    scanf("%f", &populacao1);
+    getchar();  
 
-    // Cálculo da densidade populacional
-    populacao_por_k2_1 = populacao1 / area1;
+    printf("Digite o nome da cidade:\n");
+    scanf(" %[^\n]s", nome);  
 
-    // Cadastro da segunda cidade
-    printf("\nDigite o código da segunda cidade:\n");
-    scanf("%d", &codigo_cidade2);
+    printf("Digite a população:\n");
+    scanf("%d", &populacao);
 
-    printf("Digite a área da segunda cidade (km²):\n");
-    scanf("%f", &area2);
+    printf("Digite a área:\n");
+    scanf("%f", &area);
 
-    printf("Digite a população da segunda cidade:\n");
-    scanf("%f", &populacao2);
+    printf("Digite o PIB:\n");
+    scanf("%f", &pib);
 
-    // Cálculo da densidade populacional
-    populacao_por_k2_2 = populacao2 / area2;
+    printf("Digite o número de pontos turísticos:\n");
+    scanf("%d", &pontos_turisticos);
 
-    // Exibição dos dados cadastrados
-    printf("\nCidade 1:\n");
-    printf("Código: %d\n", codigo_cidade1);
-    printf("Área: %.2f km²\n", area1);
-    printf("População: %.2f habitantes\n", populacao1);
-    printf("Densidade populacional: %.2f hab/km²\n", populacao_por_k2_1);
+    
+    printf("\nCarta 1:\n");
+    printf("Estado: %s\n", estado);
+    printf("Código: %d\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f bilhões\n", pib);
+    printf("Pontos turísticos: %d\n", pontos_turisticos);
 
-    printf("\nCidade 2:\n");
-    printf("Código: %d\n", codigo_cidade2);
-    printf("Área: %.2f km²\n", area2);
-    printf("População: %.2f habitantes\n", populacao2);
-    printf("Densidade populacional: %.2f hab/km²\n", populacao_por_k2_2);
+    
+    printf("\nDigite o seu estado2:\n");
+    scanf("%2s", estado);
 
-    // Comparação das cidades e determinação da vencedora
-    printf("\nComparação das cidades:\n");
+    printf("Digite o código2:\n");
+    scanf("%d", &codigo);
 
-    if (populacao1 > populacao2) {
-        printf("Cidade 1 tem maior população.\n");
-    } else if (populacao2 > populacao1) {
-        printf("Cidade 2 tem maior população.\n");
-    } else {
-        printf("Ambas as cidades têm a mesma população.\n");
-    }
+    getchar();  
 
-    if (area1 > area2) {
-        printf("Cidade 1 tem maior área territorial.\n");
-    } else if (area2 > area1) {
-        printf("Cidade 2 tem maior área territorial.\n");
-    } else {
-        printf("Ambas as cidades têm a mesma área.\n");
-    }
+    printf("Digite o nome da cidade2:\n");
+    scanf(" %[^\n]s", nome);
 
-    if (populacao_por_k2_1 > populacao_por_k2_2) {
-        printf("Cidade 1 tem maior densidade populacional.\n");
-    } else if (populacao_por_k2_2 > populacao_por_k2_1) {
-        printf("Cidade 2 tem maior densidade populacional.\n");
-    } else {
-        printf("Ambas as cidades têm a mesma densidade populacional.\n");
-    }
+    printf("Digite a população2:\n");
+    scanf("%d", &populacao);
+
+    printf("Digite a área2:\n");
+    scanf("%f", &area);
+
+    printf("Digite o PIB2:\n");
+    scanf("%f", &pib);
+
+    printf("Digite o número de pontos turísticos2:\n");
+    scanf("%d", &pontos_turisticos);
+
+    
+    printf("\nCarta 2:\n");
+    printf("Estado: %s\n", estado);
+    printf("Código: %d\n", codigo);
+    printf("Nome: %s\n", nome);
+    printf("População: %d\n", populacao);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f bilhões\n", pib);
+    printf("Pontos turísticos: %d\n", pontos_turisticos);
 
     return 0;
 }
