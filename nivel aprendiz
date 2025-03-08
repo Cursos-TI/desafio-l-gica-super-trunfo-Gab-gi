@@ -1,4 +1,3 @@
-// Online C compiler to run C program onlin
 
 #include <stdio.h>
 
@@ -6,13 +5,13 @@ int main() {
     
     char estado[3], nome[50];
     int codigo, populacao, pontos_turisticos;
-    float pib_per,Dencidade, area, pib;
+    float area, pib;
 
     
     printf("Digite o seu estado (ex: SP, RJ):\n");
     scanf("%2s", estado);  // Lê até 2 caracteres (+1 para o '\0')
 
-    printf("Digite o código1:\n");
+    printf("Digite o código:\n");
     scanf("%d", &codigo);
 
     getchar();  
@@ -31,7 +30,9 @@ int main() {
 
     printf("Digite o número de pontos turísticos:\n");
     scanf("%d", &pontos_turisticos);
-printf("\nCarta 1:\n");
+
+    
+    printf("\nCarta 1:\n");
     printf("Estado: %s\n", estado);
     printf("Código: %d\n", codigo);
     printf("Nome: %s\n", nome);
@@ -39,12 +40,7 @@ printf("\nCarta 1:\n");
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f bilhões\n", pib);
     printf("Pontos turísticos: %d\n", pontos_turisticos);
-    
-    Dencidade = populacao / area;
-    pib_per = populacao / pib;
-    printf("Dencidade: %f\n", Dencidade);
-    printf("Pib percapito: %f\n", pib_per);
-    
+
     
     printf("\nDigite o seu estado2:\n");
     scanf("%2s", estado);
@@ -78,11 +74,6 @@ printf("\nCarta 1:\n");
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f bilhões\n", pib);
     printf("Pontos turísticos: %d\n", pontos_turisticos);
-   
-    Dencidade = populacao / area;
-    pib_per = populacao / pib;
-    printf("Dencidade: %.2f\n", Dencidade);
-    printf("Pib percapito: %.2f\n", pib_per);
 
     return 0;
 }
