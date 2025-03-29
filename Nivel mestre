@@ -1,17 +1,14 @@
-// Online C compiler to run C program online
-// Online C compiler to run C program online
-// Online C compiler to run C program online
-// Online C compiler to run C program online
+
 #include <stdio.h>
 int main() {
-
+// declarar as variaveis
 char estado1 [30], nome1 [50];
 char estado2 [30], nome2 [50];
 int super_poder1, super_poder2, codigo, pontos_turistico1, pontos_turistico2, Vencedora;
 float pib_per1,Densidade1, area1, pib1;
 float pib_per2,Densidade2, area2, pib2;
 unsigned long int populacao1, populacao2;
-
+//entrada de dados da carta 1
 printf("Digite o seu estado 1:\n");
 scanf("%2s", estado1); // Lê até 2 caracteres (+1 para o '\0')
 printf("Digite o código 1:\n");
@@ -27,8 +24,9 @@ printf("Digite o PIB 1:\n");
 scanf("%f", &pib1);
 printf("Digite o número de pontos turísticos 1:\n");
 scanf("%d", &pontos_turistico1);
+//cálculo do super poder
 super_poder1 = populacao1 + pib1 + area1 + pontos_turistico1 + pib_per1;
-
+//impressao da carta 1
 printf("\nCarta 1:\n");
 printf("Estado: %s\n", estado1);
 printf("Código: %d\n", codigo);
@@ -37,12 +35,13 @@ printf("População: %u\n", populacao1);
 printf("Área: %.2f km²\n", area1);
 printf("PIB: %.2f bilhões\n", pib1);
 printf("Pontos turísticos: %d\n", pontos_turistico1);
+//cálculo do pib e densidade
 pib_per1 = pib1 / populacao1;
 printf ("Pib percapita: %.2f\n", pib_per1);
 Densidade1 = populacao1 / area1;
 printf ("Dencidade: %.2f\n", Densidade1);
 printf ("super poder: %.2d\n", super_poder1);
-
+//entrada de dados da 2 carta
 printf("\nDigite o seu estado2:\n");
 scanf("%2s", estado2);
 printf("Digite o código2:\n");
@@ -58,9 +57,9 @@ printf("Digite o PIB2:\n");
 scanf("%f", &pib2);
 printf("Digite o número de pontos turísticos2:\n");
 scanf("%d", &pontos_turistico2);
-
+//calculo do super poder
 super_poder2 = populacao2 + pib2 + area2 + pontos_turistico2 + pib_per2;
-
+// impressao da carta 2
 printf("\nCarta 2:\n");
 printf("Estado: %s\n", estado2);
 printf("Código: %d\n", codigo);
@@ -69,13 +68,14 @@ printf("População: %u\n", populacao2);
 printf("Área: %.2f km²\n", area2);
 printf("PIB: %.2f bilhões\n", pib2);
 printf("Pontos turísticos: %d\n", pontos_turistico2);
+//cálculo do pib e dencidade
 pib_per2 = pib2 / populacao2;
 printf ("Pib percapita: %.2f\n up", pib_per2);
 Densidade2 = populacao2 / area2;
 printf ("Dencidade: %.2f\n", Densidade2);
 printf ("super poder: %2d\n", super_poder2);
-
-printf ("Comparaçâo das cartas.\n ");
+//comparacao das cartas
+printf ("\nComparaçâo das cartas.\n ");
 printf ("População. %u\n", (populacao1 > populacao2) *1+ ( populacao2 > populacao1) *2);
 int area;
 printf ("area. %d\n", (area1 > area2) *1+ ( area2 > area1) *2);
@@ -89,6 +89,7 @@ int pib_per;
 printf ("pip percapita. %d\n", (pib_per1 > pib_per2) *1+ ( pib_per2 > pib_per1) *2);
 printf ("Vencedor. %d\n", (super_poder1 > super_poder2) *1+ ( super_poder2 > super_poder1) *2);
 
-//compar as carta
+return 0;
+}
 
 
